@@ -1,5 +1,15 @@
+function mostrarTexto(){
+    let y = document.getElementById('text-area')
+    let x = document.getElementById('muñeco')
+    if (x.value.trim() === '') {
+      y.classList.remove = 'ocultar-imagen';
+    } else {
+      y.classList.add = 'ocultar-imagen';
+    }
+}
+
 function desencriptarTexto() {
-    const textinput = document.getElementById('input').value
+    const textinput = document.getElementById('input-textarea').value
     const desencriptar_Texto = {
         'ai': 'a',
         'enter': 'e',
@@ -8,12 +18,14 @@ function desencriptarTexto() {
         'ufat': 'u'
     }
     const valueInput = textinput.replace(/(ai|enter|imes|ober|ufat)/g, match => desencriptar_Texto[match])
-    let textoDesencriptado = document.getElementById('text-area')
+    const textoDesencriptado = document.getElementById('text-area')
     textoDesencriptado.value = valueInput
+    const imagen = document.getElementById('muñeco'); // reemplaza 'imagen' con el id de tu imagen
+    imagen.style.display = 'none';
 }
 
 function encriptarTexto() {
-    const textinput = document.getElementById('input').value
+    const textinput = document.getElementById('input-textarea').value
     const encriptarTexto = {
         'a': 'ai',
         'e': 'enter',
@@ -22,8 +34,10 @@ function encriptarTexto() {
         'u': 'ufat'
     }
     const valueInput = textinput.replace(/[aeiou]/g, match => encriptarTexto[match])
-    let textoEncriptado = document.getElementById('text-area')
+    const textoEncriptado = document.getElementById('text-area')
     textoEncriptado.value = valueInput
+    const imagen = document.getElementById('muñeco'); // reemplaza 'imagen' con el id de tu imagen
+    imagen.style.display = 'none';
 
 }
 

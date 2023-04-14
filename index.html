@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="index.js"></script>
     <link rel="stylesheet" href="index.css">
-   
+
     <title>Encriptador</title>
 </head>
+
 <body>
-    <div class="contenedor">
-        <img id="logo" src="Vector.png" alt="Alura">
-        <input id="input" type="texto" placeholder="Ingrese el texto aquí">
+    <header>
+        <img id="logo" src="./imagenes/Logo@2x.png" alt="Alura">
+    </header>
+    <section class="section1">
+        <div class="contenedor-input">
+            <textarea name="encritar" id="input-textarea" cols="30" rows="10"></textarea>
+        </div>
+        <div class="info">
+            <img class="signo" src="imagenes/Vector.png" alt="!">
+            <p class="info-input">Solo letras minusculas y sin acentos</p>
+        </div>
         <div class="contenedor-de-botones">
-        <button id="boton-encriptador" onclick="encriptarTexto()">Encriptar</button>
-        <button id="boton-desencriptador" onclick="desencriptarTexto()">Desencriptar</button>
+            <button id="boton-encriptador" onclick="encriptarTexto()">Encriptar</button>
+            <button id="boton-desencriptador" onclick="desencriptarTexto()">Desencriptar</button>
         </div>
-        <div>
-        <textarea id="text-area">
-        </textarea>
-        <img id="muñeco" src="Muñeco.png" alt="Muñeco-alura">
-        <button id="copy">copy</button>
+    </section>
+    <section class="section2">
+        <div class="rectangulo">
+            <div class="muñeco">
+                <img id="muñeco" src="imagenes/Muñeco.png" alt="Muñeco-alura">
+            </div>
         </div>
-    </div>
+        <div class="contenedor-resultado">
+            <div class="contenedor-textarea">
+                <textarea name="Encriptador" id="text-area" cols="30" rows="10">
+                   Ningún mensaje fue encontrado
+                </textarea>
+            </div>
+            <div class="contenedor-mensajes">
+                <p class="mensaje">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+        </div>
+
+        <div class="contenedor-boton-copy">
+            <button id="copy">copy</button>
+        </div>
+
+    </section>
+
+
 </body>
+
 </html>
