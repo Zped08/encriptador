@@ -1,4 +1,4 @@
-function mostrarTexto(){
+/* function mostrarTexto(){
     let y = document.getElementById('text-area')
     let x = document.getElementById('muñeco')
     if (x.value.trim() === '') {
@@ -7,7 +7,7 @@ function mostrarTexto(){
       y.classList.add = 'ocultar-imagen';
     }
 }
-
+ */
 function desencriptarTexto() {
     const textinput = document.getElementById('input-textarea').value
     const desencriptar_Texto = {
@@ -20,8 +20,10 @@ function desencriptarTexto() {
     const valueInput = textinput.replace(/(ai|enter|imes|ober|ufat)/g, match => desencriptar_Texto[match])
     const textoDesencriptado = document.getElementById('text-area')
     textoDesencriptado.value = valueInput
-    const imagen = document.getElementById('muñeco'); // reemplaza 'imagen' con el id de tu imagen
+    const imagen = document.getElementById('muñeco'); 
     imagen.style.display = 'none';
+    const mensaje = document.getElementById('mensaje'); 
+    mensaje.style.display = 'none';
 }
 
 function encriptarTexto() {
@@ -36,13 +38,16 @@ function encriptarTexto() {
     const valueInput = textinput.replace(/[aeiou]/g, match => encriptarTexto[match])
     const textoEncriptado = document.getElementById('text-area')
     textoEncriptado.value = valueInput
-    const imagen = document.getElementById('muñeco'); // reemplaza 'imagen' con el id de tu imagen
+    const imagen = document.getElementById('muñeco'); 
     imagen.style.display = 'none';
-
+    const mensaje = document.getElementById('mensaje'); 
+    mensaje.style.display = 'none';
 }
 
+
+
 function copy() {
-    let copyText = document.querySelector("textarea");
+    let copyText = document.getElementById("text-area");
     copyText.select();
     document.execCommand("copy");
 }
