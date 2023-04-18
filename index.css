@@ -4,7 +4,7 @@ body {
     width: 1440px;
     border-radius: 0px;
     background: #f3f5fc;
-
+    
 }
 
 .contenedor {
@@ -353,3 +353,31 @@ color: #0A3871;
         flex-grow: 0;
 }
 
+footer{
+    position: relative;
+    width: 50%;
+    margin: auto;
+    bottom: 0;
+    top: 50px;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    /* shadow */
+    
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.texto-footer{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #0A3871;
+}
